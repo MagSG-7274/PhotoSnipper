@@ -5,8 +5,13 @@ import cv2, os
 name = input("Your Name? \n")
 num_of_photos: int = input("How many photos do you want to take?\n")
 
+try:
+    os.chdir("out")
+except FileNotFoundError:
+    os.mkdir("out")
+
 webcam = cv2.VideoCapture(0)
-os.chdir("out")
+
 
 for x in range(1, int(num_of_photos) + 1):
 
