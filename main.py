@@ -9,6 +9,7 @@ try:
     os.chdir("out")
 except FileNotFoundError:
     os.mkdir("out")
+    os.chdir("chdir")
 
 webcam = cv2.VideoCapture(0)
 
